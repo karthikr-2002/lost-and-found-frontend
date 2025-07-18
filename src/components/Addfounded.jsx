@@ -24,6 +24,15 @@ const Addfounded = () => {
     };
 
     const readValues = () => {
+        if (!input.email.trim()) {
+        alert("Email is required");
+        return;
+    }
+    if (!input.category.trim()) {
+        alert("Category is required");
+        return;
+    }
+
         const formData = new FormData();
         for (let key in input) {
             formData.append(key, input[key]);
